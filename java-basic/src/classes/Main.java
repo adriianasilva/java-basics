@@ -4,13 +4,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		//Criando um objeto Pessoa chamado Adriana
-		Pessoa Adriana = new Pessoa();
+		Pessoa adriana = new Pessoa();
 		
 		//Criando um objeto Casa chamado FG
-		Casa FG = new Casa();
+		Casa fg = new Casa();
 		
 		//Criando um objeto Livro chamado "Roube como um Artista"
-		Livro RoubecomoumArtista = new Livro();
+		Livro roubeComoUmArtista = new Livro();
 
 	}
 
