@@ -1,20 +1,16 @@
 package classes;
-import java.util.Scanner;
 public class Aluno {
 	
 	private String nome;
 	private int matricula;
-	private static double prova1;
-	private static double prova2;
-	private static double notaTrabalho;
-	private static double mediaAluno;
+	private double mediaAluno;
 	
-	public static void Media() {
-		mediaAluno = (prova1*0.25 + prova2*0.25 + notaTrabalho*0.5);
-		System.out.println("A média do aluno é: " + mediaAluno);
+	public double media(double provaUm, double provaDois, double notaTrabalho) {
+		mediaAluno = (provaUm*0.25 + provaDois*0.25 + notaTrabalho*0.5);
+		return mediaAluno;
 	}
 	
-	public static void Final() {
+	public void provaFinal(double provaUm, double provaDois, double notaTrabalho) {
 		if (mediaAluno < 6){
 			double notaFinal = 6 - mediaAluno;
 			System.out.println("O aluno precisa de " + notaFinal + " para a prova final");
@@ -23,15 +19,19 @@ public class Aluno {
 		}
 	}
 
-	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		System.out.println("Insira a nota da prova 1:");
-		prova1 = entrada.nextDouble();
-		System.out.println("Insira a nota da prova 2:");
-		prova2 = entrada.nextDouble();
-		System.out.println("Insira a nota do trabalho:");
-		notaTrabalho = entrada.nextDouble();	
-		Media();
-		Final();	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
 	}
 }

@@ -8,20 +8,16 @@ atributos. */
 
 public class Livro{
 	
-	private static String titulo;
-	private static String autor;
-	private static String totalPaginas;
-	private static String paginaAtual;
-	private static String dataAberto;
-	private static String leitor;
+	private String titulo;
+	private String autor;
+	private String totalPaginas;
+	private String paginaAtual;
+	private String dataAberto;
+	private String leitor;
 	
 
-	public static String Informacoes(){
+	public String informacoes(){
 		return (titulo+autor+totalPaginas+paginaAtual+dataAberto+leitor);
-	}
-	
-	public static void main(String[] args) {
-		Informacoes();
 	}
 
 }

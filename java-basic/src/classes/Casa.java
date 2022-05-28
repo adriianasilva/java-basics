@@ -16,17 +16,68 @@ public class Casa {
 	private String bairro;
 	private String estado;
 	
-	public static void Reformar() {
+	public void reformar() {
 		System.out.println("Reformando...");
 	}
 	
-	public static void Finalizada() {
+	public void finalizada() {
 		System.out.println("Finalizada!");
 	}
-	
-	public static void main(String[] args) {
-		Reformar();
-		Finalizada();
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public int getQuantidadeQuartos() {
+		return quantidadeQuartos;
+	}
+
+	public void setQuantidadeQuartos(int quantidadeQuartos) {
+		this.quantidadeQuartos = quantidadeQuartos;
+	}
+
+	public int getQuantidadeBanheiros() {
+		return quantidadeBanheiros;
+	}
+
+	public void setQuantidadeBanheiros(int quantidadeBanheiros) {
+		this.quantidadeBanheiros = quantidadeBanheiros;
+	}
+
+	public String getCEP() {
+		return CEP;
+	}
+
+	public void setCEP(String cEP) {
+		CEP = cEP;
+	}
+
+	public String getRua() {
+		return rua;
+	}
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 }

@@ -4,29 +4,57 @@ package classes;
 //,“correr” e “parar” que imprimam as mensagens “andando”,“correndo” e “parando”, respectivamente.
 
 
-public class Pessoa {
+public class Pessoa{
 	
 	private float altura;
 	private double peso;
 	private String cor;
 	private double rendaMensal;
 
-	public static void Andar(){
+	public void andar(){
 		System.out.println("Andando");
 	}
 	
-	public static void Correr() {
+	public void correr() {
 		System.out.println("Correndo");
 	}
 	
-	public static void Parar() {
+	public void parar() {
 		System.out.println("Parando");
 	}
-	
-	public static void main(String[] args) {
-		Andar();
-		Correr();
-		Parar();
+
+	public float getAltura() {
+		return altura;
 	}
+
+	public void setAltura(float altura) {
+		this.altura = altura;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public double getRendaMensal() {
+		return rendaMensal;
+	}
+
+	public void setRendaMensal(double rendaMensal) {
+		this.rendaMensal = rendaMensal;
+	}
+	
+	
 
 }
