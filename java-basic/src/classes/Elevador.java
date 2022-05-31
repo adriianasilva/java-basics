@@ -1,6 +1,6 @@
 package classes;
 
-public class Elevador {
+public class Elevador{
 	
 	private static int andarAtual;
 	private static int totalAndares;
