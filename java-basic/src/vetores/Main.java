@@ -6,6 +6,9 @@ public class Main {
 
 	private static int[] idades = new int[5];
 	private static double[] alturas = new double[5];
+	private static int[] a = new int[10];
+	private static int soma = 0;
+	private static int quadrados = 0;
 	
 	public static void lerIdades() {
 		for(int j=0; j < idades.length; j++) {
@@ -31,6 +34,20 @@ public class Main {
 		}
 	}
 	
+	public static void lerNumerosInteiros() {
+		for(int j = 0; j < a.length; j++) {
+			a[j] = new Scanner(System.in).nextInt();
+		}
+	}
+	
+	public static void somaNumerosQuadrados() {
+		for(int i = 0; i < a.length; i++) {
+			quadrados = a[i]*a[i];
+			soma = soma + quadrados;
+		}
+		System.out.println("A soma dos quadrados dos elementos do vetor é: " + soma);
+	}
+	
 	public static void main(String[] args) {
 		
 		//programa que mostra vetores de forma inversa
@@ -53,7 +70,13 @@ public class Main {
 		idadeInversa();
 		alturaInversa();
 		
+		/*Faça um Programa que leia um vetor A com 10 números inteiros,
+		calcule e mostre a soma dos quadrados dos elementos do vetor*/
 		
+		System.out.println("Insira 10 números inteiros");
+		lerNumerosInteiros();
+		
+		somaNumerosQuadrados();
 		
 	}
 
