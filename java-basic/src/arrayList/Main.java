@@ -156,6 +156,8 @@ public class Main {
 			}
 		}
 		
+		ler.close();
+		
 		if(suspeito.size() > 0 && suspeito.size() <= 2) {
 			System.out.println("Suspeita");
 		}else if(suspeito.size() == 3 || suspeito.size() == 4) {
