@@ -46,7 +46,7 @@ public class Main {
 			e em que mês elas ocorreram (mostrar o mês por extenso: 1 –
 			Janeiro, 2 – Fevereiro, . . .*/
 		
-		ArrayList<Double> temperaturaMedia = new ArrayList<Double>();
+		 ArrayList<Double> temperaturaMedia = new ArrayList<Double>();
 		double mediaAnual = 0;
 		double temperaturas = 0;
 		
@@ -117,6 +117,53 @@ public class Main {
 				}
 			}
 		}
+	}
+		
+		/*10) Utilizando listas, faça um programa que faça 5 perguntas para
+		uma pessoa sobre um crime. As perguntas são:
+		a. "Telefonou para a vítima?"
+		b. "Esteve no local do crime?"
+		c. "Mora perto da vítima?"
+		d. "Devia para a vítima?"
+		e. "Já trabalhou com a vítima?" 
+		O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a
+		pessoa responder positivo a 2 questões ela deve ser classificada como
+		"Suspeita"
+		, entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso
+		contrário, ele será classificado como "Inocente"*/
+		
+		ArrayList<String> perguntas = new ArrayList<String>();
+		ArrayList<Integer> suspeito = new ArrayList<Integer>();
+		Scanner ler = new Scanner(System.in);
+		
+		perguntas.add("a. Telefonou para a vítima?");
+		perguntas.add("b. Esteve no local do crime?");
+		perguntas.add("c. Mora perto da vítima?");
+		perguntas.add("d. Devia para a vítima?");
+		perguntas.add("e. Já trabalhou com a vítima?");
+		
+		System.out.println("Vamos começar o interrogatório. Digite S ou N para as perguntas seguintes");
+		
+		//System.out.println(perguntas.get(0));
+		
+		for(int i = 0; i < 5; i++) {
+			System.out.println(perguntas.get(i));
+			
+			char entrada = ler.next().charAt(0);
+			
+			if(entrada == 'S' || entrada == 's') {
+				suspeito.add(1);
+			}
+		}
+		
+		if(suspeito.size() > 0 && suspeito.size() <= 2) {
+			System.out.println("Suspeita");
+		}else if(suspeito.size() == 3 || suspeito.size() == 4) {
+			System.out.println("Cúmplice");
+		}else if(suspeito.size() == 5) {
+			System.out.println("Assassino");
+		}else {
+			System.out.println("Inocente");
 		}
 	}
 }
