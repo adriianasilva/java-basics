@@ -1,6 +1,7 @@
 package arrayList;
 
 import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class Main {
@@ -50,9 +51,9 @@ public class Main {
 		double temperaturas = 0;
 		
 		System.out.println("Insira a temperatura média de cada mês do ano");
-		
+   
 		for(int i = 0; i < 12; i++) {
-			temperaturaMedia.set(i, new Scanner(System.in).nextDouble());
+			temperaturaMedia.add(i, new Scanner(System.in).nextDouble());
 		}
 		
 		for(int i = 0; i < temperaturaMedia.size(); i++) {
@@ -63,11 +64,59 @@ public class Main {
 		
 		System.out.println("A média anual de temperaturas foi: " + mediaAnual +"°C");
 		
-		/*for(int i = 0; i < temperaturaMedia.size(); i++) {
+		for(int i = 0; i < temperaturaMedia.size(); i++) {
 			if(temperaturaMedia.get(i) >= mediaAnual) {
-				
+				switch(i) {
+				case 1:{
+					System.out.println(i+ " - Janeiro: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 2:{
+					System.out.println(i+ " - Fevereiro: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 3:{
+					System.out.println(i+ " - Março: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 4:{
+					System.out.println(i+ " - Abril: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 5:{
+					System.out.println(i+ " - Maio: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 6:{
+					System.out.println(i+ " - Junho: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 7:{
+					System.out.println(i+ " - Julho: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 8:{
+					System.out.println(i+ " - Agosto: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 9:{
+					System.out.println(i+ " - Setembro: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 10:{
+					System.out.println(i+ " - Outubro: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 11:{
+					System.out.println(i+ " - Novembro: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
+				case 12:{
+					System.out.println(i+ " - Dezembro: " + temperaturaMedia.get(i)+ "°C");
+					break;
+				}
 			}
-		}*/
-		
+		}
+		}
 	}
 }
