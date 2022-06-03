@@ -27,8 +27,7 @@ public class TestarAnimais {
 		ursocanada.setCor("Vermelho");
 		ursocanada.setAmbiente("Terra");
 		ursocanada.setVelocidadeMedia(0.5);
-		ursocanada.setAlimento("Mel");
-		
+		ursocanada.setAlimento("Mel");	
 		
 		camelo.dadosMamifero();
 		ursocanada.dadosMamifero();
