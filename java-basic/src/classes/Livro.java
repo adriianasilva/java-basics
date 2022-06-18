@@ -14,6 +14,7 @@ public class Livro{
 	private String paginaAtual;
 	private String dataAberto;
 	private String leitor;
+	private String idioma;
 	
 
 	public String informacoes(){

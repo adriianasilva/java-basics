@@ -48,6 +48,11 @@ public class Main {
 		int totalAndares = 10;
 		lacerda.inicializa(capacidadeElevador, totalAndares);
 		
+		//acender lampada
+		
+		Lampada lampada = new Lampada();
+		lampada.Acender();
+		lampada.Apagar();
 	}
 
 }
