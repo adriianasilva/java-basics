@@ -54,7 +54,7 @@ public class Main {
 		lampada.Acender();
 		lampada.Apagar();
 		
-		//role do banco
+		//operacao conta bancaria
 	
 		ContaCorrente juninho = new ContaCorrente();
 		double saldoConta = 1000.00;
