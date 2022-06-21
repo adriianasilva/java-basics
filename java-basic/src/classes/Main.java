@@ -53,6 +53,20 @@ public class Main {
 		Lampada lampada = new Lampada();
 		lampada.Acender();
 		lampada.Apagar();
+		
+		//role do banco
+	
+		ContaCorrente juninho = new ContaCorrente();
+		double saldoConta = 1000.00;
+		boolean contaEspecial = false;
+		double valorSaque = 200.00;
+		double valorDeposito = 500.00;
+		
+		juninho.ConsultaSaldo(saldoConta);
+		juninho.ChequeEspecial(contaEspecial);
+		juninho.Saque(valorSaque, saldoConta);
+		juninho.Deposito(valorDeposito, saldoConta);
+		
 	}
 
 }
