@@ -1,9 +1,9 @@
 package classes;
 public class Aluno {
 	
-	private String nome;
-	private int matricula;
-	private double mediaAluno;
+	protected String nome;
+	protected int matricula;
+	protected double mediaAluno;
 	
 	public double media(double provaUm, double provaDois, double notaTrabalho) {
 		mediaAluno = (provaUm*0.25 + provaDois*0.25 + notaTrabalho*0.5);
