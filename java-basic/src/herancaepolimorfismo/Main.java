@@ -15,7 +15,6 @@ public class Main {
 		
 		ContaPoupanca lotso = new ContaPoupanca("Lotso", 6545, 1000.00, 0.01);
 		lotso.calcularNovoSaldo(1000.00);
-	
 		
 		//teste ImpostoDeRenda
 		
