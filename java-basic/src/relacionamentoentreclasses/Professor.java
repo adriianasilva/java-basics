@@ -4,6 +4,7 @@ public class Professor {
 	private String nome;
 	private String departamento;
 	private String email;
+	
 	public String getNome() {
 		return nome;
 	}
@@ -23,5 +24,8 @@ public class Professor {
 		this.email = email;
 	}
 	
+	public String obterInfo() {
+		return "Professor = " + nome;
+	}
 	
 }
