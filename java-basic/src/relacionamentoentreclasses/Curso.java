@@ -4,7 +4,7 @@ public class Curso {
 	
 	private String nome;
 	private String horario;
-	private Professor[] professor;
+	private Professor professores;
 	private Aluno[] alunos;
 	public String getNome() {
 		return nome;
@@ -18,7 +18,12 @@ public class Curso {
 	public void setHorario(String horario) {
 		this.horario = horario;
 	}
-
+	public Professor getProfessores() {
+		return professores;
+	}
+	public void setProfessores(Professor professores) {
+		this.professores = professores;
+	}
 	public Aluno[] getAlunos() {
 		return alunos;
 	}
@@ -26,22 +31,17 @@ public class Curso {
 		this.alunos = alunos;
 	}
 	
-	public Professor[] getProfessor() {
-		return professor;
-	}
-	public void setProfessor(Professor[] professor) {
-		this.professor = professor;
-	}
-	public String obterInfo() {
-		String info = "Nome do Curso = " + nome + "\n";
+	
+	public void mediaGeral() {
 		
-		if (professor != null) {
-			info += professor.obterInfo();
-		}
+		double somatorioMedia = 0;
 		
-		if (alunos != null) {
-			System.out.println("---Alunos---");
-			info+= Aluno.obterInfo();
+		for(int i = 0; i < this.alunos.length; i++) {
+			somatorioMedia += alunos[i].calcularMedia();
 		}
+
+		double mediaTurma = (somatorioMedia)/alunos.length;
+		
+		System.out.println("A media Geral da Turma é: " + Math.round(mediaTurma));
 	}
 }

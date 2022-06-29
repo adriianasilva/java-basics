@@ -1,71 +1,51 @@
 package relacionamentoentreclasses;
 
+import java.util.Arrays;
+
 public class Aluno {
 	private String nome;
 	private String matricula;
-	private double notaUm;
-	private double notaDois;
-	private double notaTres;
-	private double notaQuatro;
+	private double[] notas = new double[4];
 	
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getMatricula() {
 		return matricula;
 	}
+
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	public double getNotaUm() {
-		return notaUm;
-	}
-	public void setNotaUm(double notaUm) {
-		this.notaUm = notaUm;
-	}
-	public double getNotaDois() {
-		return notaDois;
-	}
-	public void setNotaDois(double notaDois) {
-		this.notaDois = notaDois;
-	}
-	public double getNotaTres() {
-		return notaTres;
-	}
-	public void setNotaTres(double notaTres) {
-		this.notaTres = notaTres;
-	}
-	public double getNotaQuatro() {
-		return notaQuatro;
-	}
-	public void setNotaQuatro(double notaQuatro) {
-		this.notaQuatro = notaQuatro;
+
+	public double[] getNotas() {
+		return notas;
 	}
 
-	public String obterInfo() {
-		String info = "Nome Aluno = " + nome;
-		info+= "Matrícula = " + matricula;
-		info += "Notas: ";
-		
-		double soma = 0;
-		info += notaUm;
-		info += notaDois;
-		info += notaTres;
-		info += notaQuatro;
-		
-		double media = soma/4;
-		info += "\n" + "Média = " + media + " - ";
-		if (media >=7) {
-			info += "Aprovado!";
-		}else {
-			info += "Reprovado!";
-		}
-		
-		return info;
+	public void setNotas(double[] notas) {
+		this.notas = notas;
 	}
 	
+	public double calcularMedia(){
+		double mediaAluno = 0;
+		
+		mediaAluno = (Arrays.stream(this.notas).sum())/this.notas.length;
+		
+		return mediaAluno;
+	}
+	
+	public void resultadoNotas(){
+		double mediaAluno = calcularMedia();
+		if(calcularMedia() >= 7){
+			System.out.println(this.nome + ", aprovado, sua média é " + mediaAluno);
+		}else {
+			System.out.println(this.nome + ", reprovado, sua média é " + mediaAluno);
+		}
+	}
 	
 }

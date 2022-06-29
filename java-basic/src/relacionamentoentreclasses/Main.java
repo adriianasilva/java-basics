@@ -40,6 +40,11 @@ public class Main {
 		//criacao curso
 		
 		Curso curso = new Curso();
+		double[] notasAlunoUm = new double[4];
+		double[] notasAlunoDois = new double[4];
+		double[] notasAlunoTres = new double[4];
+		double[] notasAlunoQuatro = new double[4];
+		double[] notasAlunoCinco = new double[4];
 		
 		curso.setNome("Banco de Dados");
 		curso.setHorario("Noturno");
@@ -52,43 +57,48 @@ public class Main {
 		Aluno alunoUm = new Aluno();
 		alunoUm.setNome("Dustin");
 		alunoUm.setMatricula("2156492");
-		alunoUm.setNotaUm(2.5);
-		alunoUm.setNotaDois(2.5);
-		alunoUm.setNotaTres(2.5);
-		alunoUm.setNotaQuatro(6.0);
+		notasAlunoUm[0] = 2.5;
+		notasAlunoUm[1] = 2.5;
+		notasAlunoUm[2] = 2.5;
+		notasAlunoUm[3] = 2.5;
+		alunoUm.setNotas(notasAlunoUm);
 		
 		Aluno alunoDois = new Aluno();
 		alunoDois.setNome("Eleven");
 		alunoDois.setMatricula("216116196");
-		alunoDois.setNotaUm(6.0);
-		alunoDois.setNotaDois(2.5);
-		alunoDois.setNotaTres(10);
-		alunoDois.setNotaQuatro(5.0);
+		notasAlunoDois[0] = 6.0;
+		notasAlunoDois[1] = 2.5;
+		notasAlunoDois[2] = 10;
+		notasAlunoDois[3] = 5.0;
+		alunoDois.setNotas(notasAlunoDois);
 	
 		Aluno alunoTres = new Aluno();
 		alunoTres.setNome("Steve");
 		alunoTres.setMatricula("219119169");
-		alunoTres.setNotaUm(3.5);
-		alunoTres.setNotaDois(7.5);
-		alunoTres.setNotaTres(9.5);
-		alunoTres.setNotaQuatro(5.2);
+		notasAlunoTres[0] = 3.5;
+		notasAlunoTres[1] = 7.5;
+		notasAlunoTres[2] = 9.5;
+		notasAlunoTres[3] = 5.2;
+		alunoTres.setNotas(notasAlunoTres);
 		
 		Aluno alunoQuatro = new Aluno();
 		alunoQuatro.setNome("Will");
 		alunoQuatro.setMatricula("217858949");
-		alunoQuatro.setNotaUm(10);
-		alunoQuatro.setNotaDois(10);
-		alunoQuatro.setNotaTres(10);
-		alunoQuatro.setNotaQuatro(10);
-		
+		notasAlunoQuatro[0] = 10;
+		notasAlunoQuatro[1] = 10;
+		notasAlunoQuatro[2] = 10;
+		notasAlunoQuatro[3] = 10;
+		alunoQuatro.setNotas(notasAlunoQuatro);
+	
 		Aluno alunoCinco = new Aluno();
 		alunoCinco.setNome("Nancy");
 		alunoCinco.setMatricula("21548696");
-		alunoCinco.setNotaUm(9);
-		alunoCinco.setNotaDois(8);
-		alunoCinco.setNotaTres(7);
-		alunoCinco.setNotaQuatro(6);
-		
+		notasAlunoCinco[0] = 10;
+		notasAlunoCinco[1] = 10;
+		notasAlunoCinco[2] = 10;
+		notasAlunoCinco[3] = 10;
+		alunoCinco.setNotas(notasAlunoCinco); 
+			
 		Aluno[] alunos = new Aluno[5];
 		alunos[0] = alunoUm;
 		alunos[1] = alunoDois;
@@ -98,33 +108,12 @@ public class Main {
 		
 		curso.setAlunos(alunos);
 		
-		
-		/*public CalcularMedia(double notaUm, double notaDois, double notaTres, double notaQuatro){
-			double mediaAluno;
-				if(mediaAluno >= 7){
-					System.out.println("Aluno Aprovado, sua média é " + mediaAluno);
-				}else {
-					System.out.println("Aluno Reprovado, sua média é " + mediaAluno);
-				}
-			double mediaGeral = mediaGeral + mediaAluno;
-		}
-		
-		private static MediaGeral(double mediaAluno) {
-			double mediaGeral = 0;
-			mediaGeral = mediaGeral + mediaAluno;
-			double mediaTurma = (mediaGeral)/4;
-		}
-		
-		
-		if(curso != null && curso.getAlunos() != null) {
-			for(int i = 0 ; i < alunos.length < i++;) {
-				CalcularMedia(alunos[i]);
-				MediaGeral(alunos[i]);
-			}
-			System.out.println("A media Geral da Turma é: " + mediaTurma);
-		}*/
-		
-		
+		alunoUm.resultadoNotas();
+		alunoDois.resultadoNotas();
+		alunoTres.resultadoNotas();
+		alunoQuatro.resultadoNotas();
+		alunoCinco.resultadoNotas();
+		curso.mediaGeral();
 	}
 
 }
